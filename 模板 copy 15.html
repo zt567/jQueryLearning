@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    @import url(./reset.css);
+
+    img {
+      width: 250px;
+      height: 400px;
+    }
+
+    ul {
+      margin: 100px auto;
+      width: 750px;
+      height: 400px;
+      animation: change 10s linear infinite;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes change {
+      50% {
+        background-color: skyblue;
+      }
+    }
+
+    li {
+      position: absolute;
+      opacity: .3;
+    }
+
+    li:nth-child(1) {
+      animation: move1 15s linear alternate-reverse infinite;
+      animation-fill-mode: both;
+      top: 0;
+      left: 0;
+      width: 200%;
+    }
+
+    img {
+      width: 70%;
+    }
+
+    @keyframes move1 {
+      from {
+        margin-left: 0px;
+      }
+
+      to {
+        margin-left: -300px;
+      }
+    }
+
+    li:nth-child(2) {
+      animation: move2 15s linear alternate-reverse infinite;
+      animation-fill-mode: both;
+      top: 0;
+      left: 200px;
+      width: 200%;
+    }
+
+    @keyframes move2 {
+      from {
+        margin-left: 0px;
+      }
+
+      to {
+        margin-left: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul>
+    <li><img src="./img/c2.png" alt=""></li>
+    <li><img src="./img/c2.png" alt=""></li>
+  </ul>
+
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    });
+  </script>
+</body>
+
+</html>

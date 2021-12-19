@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    @import url(./reset.css);
+    img{
+      width: 200px;
+    }
+    div{
+      width: 400px;
+      height: 150px;
+      border: 1px solid red;
+      overflow: hidden;
+    }
+
+    ul {
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      width:1600px;
+      height: 150px;
+      border: 1px solid red;
+      animation: carousel 5s linear 0s infinite normal ;
+      /* position: relative; */
+    }
+    @keyframes carousel{
+      from{
+        /* top: 0;
+        left: 0; */
+        margin-left: 0;
+      }
+      to{
+        /* top: 0;
+        left: -1000px; */
+        margin-left: -1200px;
+      }
+
+    }
+    li{
+      float: left;
+    }
+    
+  </style>
+</head>
+<body>
+<div>
+  <ul>
+    <li><img src="./img/a.jpg" alt=""></li>
+    <li><img src="./img/b.jpg" alt=""></li>
+    <li><img src="./img/c.jpg" alt=""></li>
+    <li><img src="./img/d.jpg" alt=""></li>
+    <li><img src="./img/e.jpg" alt=""></li>
+    <li><img src="./img/f.jpg" alt=""></li>
+    <li><img src="./img/a.jpg" alt=""></li>
+    <li><img src="./img/b.jpg" alt=""></li>
+  </ul>
+</div>
+
+
+
+
+
+</body>
+</html>

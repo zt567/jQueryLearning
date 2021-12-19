@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+</head>
+<style>
+  ul,
+  ol,
+  li {
+    list-style: none;
+    margin: 0;
+  }
+
+  .menu{
+    width: 300px;
+    height: 100px;
+    background-color: gray;
+  }
+
+  .submenu li {
+    background-color: orange;
+    display: none;
+    margin-top: 5px;
+  }
+</style>
+
+<body>
+
+    <li class="menu">選單
+      <ul class="submenu">
+        <li>欄位</li>
+        <li>欄位</li>
+        <li>欄位</li>
+      </ul>
+    </li>
+    <li class="menu">選單
+      <ul class="submenu">
+        <li>欄位</li>
+        <li>欄位</li>
+        <li>欄位</li>
+      </ul>
+    </li>
+    <li class="menu">選單
+      <ul class="submenu">
+        <li>欄位</li>
+        <li>欄位</li>
+        <li>欄位</li>
+      </ul>
+    </li>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $(".menu").click(function(){
+        $(this).children("ul").find("li").show(300)
+        $(this).siblings().children("ul").find("li").hide()
+      }),
+      
+      $(".menu").mouseleave(function(){
+        $(this).children("ul").find("li").hide()
+      })
+      
+
+    });
+  </script>
+</body>
+
+</html>

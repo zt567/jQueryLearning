@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+</head>
+<style>
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .wrap{
+    display: flex;
+  }
+  .wrap img{
+    width: 200px;
+    height: 200px;
+
+  }
+</style>
+
+<body>
+    <ul class="wrap">
+      <li><img src="./img/a.jpg" alt=""></li>
+      <li><img src="./img/b.jpg" alt=""></li>
+      <li><img src="./img/c.jpg" alt=""></li>
+      <li><img src="./img/d.jpg" alt=""></li>
+      <li><img src="./img/e.jpg" alt=""></li>
+      <li><img src="./img/f.jpg" alt=""></li>
+    </ul>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $(".wrap>li").mouseover(function(){
+        $(this).css("opacity",1);
+        $(this).siblings().css("opacity",.1);
+      });
+      
+      $(".wrap").mouseout(function(){
+                //find,
+        $(this).children("li").css("opacity",1);
+      });
+
+    });
+  </script>
+</body>
+
+</html>

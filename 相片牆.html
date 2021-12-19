@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  width: 800px;
+  height: 400px;
+  border: 1px solid darkcyan;
+  margin:  100px auto;
+  text-align: center;
+}
+li{
+  list-style: none;
+  background-color: red;
+  width: 150px;
+  height: 200px;
+  display: inline-block;
+  margin-top: 100px;
+  overflow: hidden;
+  transition-duration: 1s;
+}
+li:nth-child(1){
+  transform: rotate(30deg);
+}
+li:nth-child(2){
+  transform: rotate(45deg);
+}
+li:nth-child(3){
+  transform: rotate(10deg);
+}
+li:nth-child(4){
+  transform: rotate(45deg);
+}
+li:hover{
+  transform: none;
+  transform: scale(1.5);
+  transition-duration: 1s;
+  position: relative;
+  z-index: 999;
+}
+img{
+  width: 150px;
+  height: 200px;
+  border: 2px solid darkcyan;
+  box-sizing: border-box;
+}
+
+
+</style>
+
+<body>
+
+<ul>
+  <li><img src="./img/a.jpg" alt=""></li>
+  <li><img src="./img/a.jpg" alt=""></li>
+  <li><img src="./img/a.jpg" alt=""></li>
+  <li><img src="./img/a.jpg" alt=""></li>
+</ul>
+
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+
+
+    });
+  </script>
+</body>
+
+</html>

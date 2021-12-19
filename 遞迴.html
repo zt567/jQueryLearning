@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+</head>
+<style>
+</style>
+
+<body>
+
+
+  <button class="btn1">hide</button>
+  <button class="btn2">show</button>
+<div>
+  <img src="./img/a.jpg" alt="">
+  <img src="./img/b.jpg" alt="">
+</div>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      
+      $(".btn1").click(function(){
+        $("img").last("img").hide(100,function(){
+            $(this).prev().hide(100,arguments.callee)
+            console.log(arguments);
+            console.log(arguments.callee);
+          })
+      });
+
+      $(".btn2").click(function(){
+        $("img").first("img").show(100,function(){
+            $(this).next().show(100,arguments.callee)
+          })
+      });
+    })
+  </script>
+</body>
+
+</html>

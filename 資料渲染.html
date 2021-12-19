@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+  ol,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .title {
+    display: flex;
+  }
+
+  .content {
+    display: flex;
+  }
+  img{
+    width: 50px;
+    height: 50px;
+  }
+</style>
+
+<body>
+  <button>asd</button>
+  <div>
+    <table>
+      <thead>
+        <th>名稱</th>
+        <th>年齡</th>
+        <th>圖片</th>
+      </thead>
+      <tbody class="data">
+
+      </tbody>
+    </table>
+  </div>
+  <a href=""></a>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    var data = [
+      { name: 'john1', age: 11, img: "./img/a.jpg" },
+      { name: 'john2', age: 12, img: "./img/b.jpg" },
+      { name: 'john3', age: 13, img: "./img/c.jpg" },
+    ];
+    $(function(){
+      $("button").click(function () {
+        for(i=0;i<data.length;i++){
+          var o = data[i];
+          $("<tr><td>"+o.name+"</td><td>"+o.age+"</td><td><img src="+o.img+"></img></td><tr>").appendTo(".data")
+        }
+      })
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <div id="box">
+    <img src="../img/a.jpg" alt="">//正常顯示的圖片
+    <div id="xiao"></div>
+  </div>
+  <div id="box2">
+    <img src="../img/a.jpg" alt="" id="big">//要放大的圖片
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $("#box").on("mousemove", function (event) {
+        $("#xiao").show();
+        $("#box2").show();
+        var mX = event.pageX;
+        var mY = event.pageY;
+        var xiaoX = mX / 2;
+        var xiaoY = mY / 2;
+        // 遮罩層 位置
+        $("#xiao").css({
+          top: xiaoY,
+          left: xiaoX
+        })
+        // 大圖的位置
+        $("#big").css({
+          top: - xiaoY * 3,
+          left: - xiaoX * 3
+        })
+      }).on("mouseleave", function () {
+        $("#xiao").hide();
+        $("#box2").hide();
+      })
+    });
+  </script>
+</body>
+
+</html>

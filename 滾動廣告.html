@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>test</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .box {
+    width: 100px;
+    height: 200px;
+    background-color: orange;
+    float: left;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    display: none;
+  }
+
+  .box2 {
+    width: 100px;
+    height: 200px;
+    background-color: red;
+    float: right;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    display: none;
+  }
+
+  .long {
+    width: 10px;
+    height: 5000px;
+    background-color: aliceblue;
+  }
+</style>
+
+<body>
+  <div class="long"></div>
+
+  <div class="box"></div>
+  <div class="box2"></div>
+
+
+
+  <script>
+    $(function () {
+
+      $(window).scroll(function () {
+        console.log($("html,body").scrollTop());
+        var top = $("html,body").scrollTop()
+        if (1000 >= top && top >= 500) {
+          $(".box").show(1000)
+          $(".box2").show(1000)
+        } else {
+          $(".box").hide(1000)
+          $(".box2").hide(1000)
+        }
+      });
+
+    })
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

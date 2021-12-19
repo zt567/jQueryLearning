@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+
+div{
+  display: flex;
+}
+li{
+  color: yellow;
+  font-size: 50px;
+  list-style: none;
+}
+
+
+</style>
+<body>
+
+
+
+<div class="box">
+  <li>✰</li>
+  <li>✰</li>
+  <li>✰</li>
+  <li>✰</li>
+  <li>✰</li>
+</div>
+
+
+
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+
+      $("div>li").mouseover(function(){
+        $(this).text("✯")
+        $(this).prevAll().text("✯")
+      }).mouseout(function(){
+        
+        $(this).text("✰")
+        $(this).prevAll().text("✰")
+      })
+
+
+
+
+
+
+
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+
+
+
+li{
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  margin: 20px;
+}
+
+
+</style>
+
+<body>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+
+
+    $("li").each(function(index,element){
+      $(element).css("opacity",(index+1)/10)
+
+      // var index = $(this).index()
+      // $(this).css("opacity","0."+index+"")
+    })
+
+
+
+
+
+
+    });
+  </script>
+</body>
+
+</html>

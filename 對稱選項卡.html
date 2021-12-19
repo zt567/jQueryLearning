@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+</head>
+<style>
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .wrapper {
+    background-color: aliceblue;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  .left, .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+  }
+  .left li, .right li{
+  }
+  
+  .center{
+  }
+  .center img{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    margin-left: -100px;
+
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <ul class="left">
+      <li>樣品</li>
+      <li>樣品</li>
+      <li>樣品</li>
+    </ul>
+    <ul class="center">
+      <li><img src="./img/a.jpg" alt=""></li>
+      <li><img src="./img/b.jpg" alt=""></li>
+      <li><img src="./img/c.jpg" alt=""></li>
+      <li><img src="./img/d.jpg" alt=""></li>
+      <li><img src="./img/e.jpg" alt=""></li>
+      <li><img src="./img/f.jpg" alt=""></li>
+    </ul>
+    <ul class="right">
+      <li>樣品</li>
+      <li>樣品</li>
+      <li>樣品</li>
+    </ul>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $(".left>li").mouseover(function () {
+        var index = $(this).index();
+        var el = ".center>li:eq("+index+")";
+        $(el).siblings().hide();
+        $(el).show();
+      });
+      $(".right>li").mouseover(function () {
+        var index = $(this).index()+3;
+        $(".center>li:eq("+index+")").siblings().hide();
+        $(".center>li:eq("+index+")").show();
+      });
+    });
+  </script>
+</body>
+
+</html>
