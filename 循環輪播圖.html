@@ -14,19 +14,26 @@
       width: 400px;
       height: 150px;
       border: 1px solid red;
+      background-color: black;
       overflow: hidden;
     }
 
     ul {
-      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
       width:1600px;
       height: 150px;
       border: 1px solid red;
       animation: carousel 5s linear 0s infinite normal ;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
       /* position: relative; */
     }
     ul:hover{
       animation-play-state: paused;
+    }
+    ul:hover li{
+      opacity: 0.2;
+    }
+    ul>li:hover{
+      opacity: 1;
     }
     @keyframes carousel{
       from{
