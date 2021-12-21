@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    @import url(./reset.css);
+    body{
+      /* background: url(./img/a.jpg) no-repeat; */
+      /* background-size: cover; */
+      overflow: hidden;
+    }
+
+    div {
+      perspective: 900px;
+    }
+
+    ul {
+      width: 300px;
+      height: 300px;
+      margin: 300px auto;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+      /* animation: 
+      name duration timing-function delay iteration-count direction fill-mode; */
+      animation: move 10s linear 0s infinite;
+    }
+    ul:hover{
+      animation-play-state: paused;
+    }
+    ul:hover li{
+      opacity: 0.1;
+    }
+    ul li:hover{
+      opacity: 1;
+    }
+
+    @keyframes move {
+      from {
+        transform:  rotateX(-30deg) rotateY(0deg);
+      }
+
+      to {
+        transform:  rotateX(-30deg) rotateY(360deg);
+
+      }
+    }
+
+    li {
+      position: absolute;
+      line-height: 100px;
+      width: 300px;
+      height: 300px;
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+      border-radius: 90px;
+    }
+
+    li:nth-child(1) {
+      transform: rotateY(60deg) translateZ(300px);
+    }
+
+    li:nth-child(2) {
+      transform: rotateY(120deg) translateZ(300px);
+    }
+
+    li:nth-child(3) {
+      transform: rotateY(180deg) translateZ(300px);
+    }
+
+    li:nth-child(4) {
+      transform: rotateY(240deg) translateZ(300px);
+    }
+
+    li:nth-child(5) {
+      transform: rotateY(300deg) translateZ(300px);
+    }
+
+    li:nth-child(6) {
+      transform: rotateY(360deg) translateZ(300px);
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div>
+    <ul>
+      <li><img src="./img/a.jpg" alt=""></li>
+      <li><img src="./img/b.jpg" alt=""></li>
+      <li><img src="./img/c.jpg" alt=""></li>
+      <li><img src="./img/d.jpg" alt=""></li>
+      <li><img src="./img/e.jpg" alt=""></li>
+      <li><img src="./img/f.jpg" alt=""></li>
+    </ul>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    });
+  </script>
+</body>
+
+</html>
