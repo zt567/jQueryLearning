@@ -16,30 +16,29 @@
   }
 
   .wrapper {
-    background-color: aliceblue;
     width: 600px;
     height: 300px;
     display: flex;
-    justify-content: space-around;
   }
 
+  .center,
+  .left,
+  .right {
+    flex: 1;
+  }
 
-  .left, .right{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    
+  .left li,
+  .right li {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: rgb(126, 162, 230);
   }
-  .left li, .right li{
-  }
-  
-  .center{
-  }
-  .center img{
+
+  .center img {
     position: absolute;
     width: 200px;
     height: 300px;
-    margin-left: -100px;
 
   }
 </style>
@@ -71,14 +70,14 @@
     $(function () {
       $(".left>li").mouseover(function () {
         var index = $(this).index();
-        var el = ".center>li:eq("+index+")";
+        var el = ".center>li:eq(" + index + ")";
         $(el).siblings().hide();
         $(el).show();
       });
       $(".right>li").mouseover(function () {
-        var index = $(this).index()+3;
-        $(".center>li:eq("+index+")").siblings().hide();
-        $(".center>li:eq("+index+")").show();
+        var index = $(this).index() + 3;
+        $(".center>li:eq(" + index + ")").siblings().hide();
+        $(".center>li:eq(" + index + ")").show();
       });
     });
   </script>
